@@ -1,14 +1,15 @@
+{
 clearMessages ();
 function playGame (playerInput) {
 
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	const randomNumber = Math.floor(Math.random() * 3 + 1);
 	
-	let computerMove = getMoveName(randomNumber);
+	const computerMove = getMoveName(randomNumber);
 
 	printMessage('Mój ruch to: ' + computerMove);
 	
 
-	let playerMove = getMoveName(playerInput);
+	const playerMove = getMoveName(playerInput);
 
 	printMessage('Twój ruch to: ' + playerMove);
 
@@ -65,3 +66,4 @@ function playGame (playerInput) {
   scissorsBtn.addEventListener('click', function() {
 	  playGame(3);
   });
+}
