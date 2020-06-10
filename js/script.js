@@ -1,6 +1,6 @@
 {
 clearMessages ();
-function playGame (playerInput) {
+const playGame = function (playerInput) {
 
 	const randomNumber = Math.floor(Math.random() * 3 + 1);
 	
