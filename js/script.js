@@ -1,6 +1,19 @@
 {
 clearMessages ();
 const playGame = function (playerInput) {
+	const getMoveName = function (argMoveId){
+		if(argMoveId == 1){
+		return 'kamień';
+		} else if(argMoveId == 2) {
+			return 'papier';
+		} else if(argMoveId == 3) {
+			return 'nożyce';
+		}
+	
+		printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+		return 'nieznany ruch';
+	}
+
 
 	const randomNumber = Math.floor(Math.random() * 3 + 1);
 	
@@ -15,19 +28,6 @@ const playGame = function (playerInput) {
 
 	displayResult(computerMove, playerMove) ;
 	
-
-	function getMoveName(argMoveId){
-		if(argMoveId == 1){
-		return 'kamień';
-		} else if(argMoveId == 2) {
-			return 'papier';
-		} else if(argMoveId == 3) {
-			return 'nożyce';
-		}
-	
-		printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-		return 'nieznany ruch';
-	}
 	function displayResult(computerMove, playerMove) {
 		if (computerMove == 'kamień' && playerMove == 'papier'){
 			printMessage('Ty wygrywasz!');
